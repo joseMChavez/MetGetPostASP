@@ -14,9 +14,14 @@ namespace WebApi
         {
             if (!IsPostBack)
             {
-                NameValueCollection nvc= Request.Form;
+                NameValueCollection nvc = Request.Form;
                 RecibeTextBox.Text = nvc["MensajeTextBox"];
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("chat 1.aspx?MensajeTextBox=" + RecibeTextBox.Text);
         }
     }
 }

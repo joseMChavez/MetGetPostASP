@@ -14,8 +14,10 @@ namespace WebApi
         {
             if (!IsPostBack)
             {
-                NameValueCollection nvc = Request.Form;
-                MensajeTextBox.Text = nvc["RecibeTextBox"];
+                //NameValueCollection nvc = Request.Form;
+                //MensajeTextBox.Text = nvc["RecibeTextBox"];
+                MensajeTextBox.Text = Request.QueryString["MensajeTextBox"];
+
             }
         }
     }
